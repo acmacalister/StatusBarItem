@@ -1,0 +1,20 @@
+PODS:
+  - ACDataViews (0.0.2)
+  - CocoaLumberjack (1.8.1):
+    - CocoaLumberjack/Extensions
+  - CocoaLumberjack/Core (1.8.1)
+  - CocoaLumberjack/Extensions (1.8.1):
+    - CocoaLumberjack/Core
+  - NSCustomizeKit (0.0.1)
+
+DEPENDENCIES:
+  - ACDataViews
+  - CocoaLumberjack
+  - NSCustomizeKit
+
+SPEC CHECKSUMS:
+  ACDataViews: 39511b4c4264c3fe49f962d82901f8d817a10cd2
+  CocoaLumberjack: 020378ec400d658923bf5887178394f65f052c90
+  NSCustomizeKit: fd26a70ef0858a29c97cad3a042ab1759561fe8c
+
+COCOAPODS: 0.31.1

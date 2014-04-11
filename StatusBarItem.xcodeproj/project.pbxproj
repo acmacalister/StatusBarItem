@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BCBDB3718F4F77C004E4B3D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCBDB3618F4F77C004E4B3D /* Cocoa.framework */; };
+		6BCBDB4118F4F77C004E4B3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCBDB3F18F4F77C004E4B3D /* InfoPlist.strings */; };
+		6BCBDB4318F4F77C004E4B3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB4218F4F77C004E4B3D /* main.m */; };
+		6BCBDB4718F4F77C004E4B3D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6BCBDB4518F4F77C004E4B3D /* Credits.rtf */; };
+		6BCBDB4A18F4F77C004E4B3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB4918F4F77C004E4B3D /* AppDelegate.m */; };
+		6BCBDB4D18F4F77C004E4B3D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCBDB4B18F4F77C004E4B3D /* MainMenu.xib */; };
+		6BCBDB4F18F4F77C004E4B3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BCBDB4E18F4F77C004E4B3D /* Images.xcassets */; };
+		6BCBDB5618F4F77C004E4B3D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCBDB5518F4F77C004E4B3D /* XCTest.framework */; };
+		6BCBDB5718F4F77C004E4B3D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCBDB3618F4F77C004E4B3D /* Cocoa.framework */; };
+		6BCBDB5F18F4F77C004E4B3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCBDB5D18F4F77C004E4B3D /* InfoPlist.strings */; };
+		6BCBDB6118F4F77C004E4B3D /* StatusBarItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB6018F4F77C004E4B3D /* StatusBarItemTests.m */; };
+		6BCBDB7218F7634D004E4B3D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB7118F7634D004E4B3D /* Constants.m */; };
+		6BCBDB7518F78653004E4B3D /* StatusBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB7418F78653004E4B3D /* StatusBarController.m */; };
+		6BCBDB7818F78702004E4B3D /* StatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB7718F78702004E4B3D /* StatusBarView.m */; };
+		6BCBDB7B18F788AB004E4B3D /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB7A18F788AB004E4B3D /* PopoverViewController.m */; };
+		6BCBDB7D18F78912004E4B3D /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCBDB7C18F78912004E4B3D /* PopoverViewController.xib */; };
+		9EE59B55233D4663B958FAB4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BAE302A45A4B3586BC7067 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6BCBDB5818F4F77C004E4B3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BCBDB2B18F4F77C004E4B3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BCBDB3218F4F77C004E4B3D;
+			remoteInfo = StatusBarItem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		41BAE302A45A4B3586BC7067 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BCBDB3318F4F77C004E4B3D /* StatusBarItem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatusBarItem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BCBDB3618F4F77C004E4B3D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6BCBDB3918F4F77C004E4B3D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		6BCBDB3A18F4F77C004E4B3D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6BCBDB3B18F4F77C004E4B3D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6BCBDB3E18F4F77C004E4B3D /* StatusBarItem-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StatusBarItem-Info.plist"; sourceTree = "<group>"; };
+		6BCBDB4018F4F77C004E4B3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BCBDB4218F4F77C004E4B3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BCBDB4418F4F77C004E4B3D /* StatusBarItem-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StatusBarItem-Prefix.pch"; sourceTree = "<group>"; };
+		6BCBDB4618F4F77C004E4B3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		6BCBDB4818F4F77C004E4B3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6BCBDB4918F4F77C004E4B3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6BCBDB4C18F4F77C004E4B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6BCBDB4E18F4F77C004E4B3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6BCBDB5418F4F77C004E4B3D /* StatusBarItemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusBarItemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BCBDB5518F4F77C004E4B3D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6BCBDB5C18F4F77C004E4B3D /* StatusBarItemTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StatusBarItemTests-Info.plist"; sourceTree = "<group>"; };
+		6BCBDB5E18F4F77C004E4B3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6BCBDB6018F4F77C004E4B3D /* StatusBarItemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusBarItemTests.m; sourceTree = "<group>"; };
+		6BCBDB7018F7634D004E4B3D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		6BCBDB7118F7634D004E4B3D /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		6BCBDB7318F78653004E4B3D /* StatusBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarController.h; sourceTree = "<group>"; };
+		6BCBDB7418F78653004E4B3D /* StatusBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarController.m; sourceTree = "<group>"; };
+		6BCBDB7618F78702004E4B3D /* StatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarView.h; sourceTree = "<group>"; };
+		6BCBDB7718F78702004E4B3D /* StatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarView.m; sourceTree = "<group>"; };
+		6BCBDB7918F788AB004E4B3D /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
+		6BCBDB7A18F788AB004E4B3D /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
+		6BCBDB7C18F78912004E4B3D /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		B6C2F7651A274A66848D89FB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BCBDB3018F4F77C004E4B3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BCBDB3718F4F77C004E4B3D /* Cocoa.framework in Frameworks */,
+				9EE59B55233D4663B958FAB4 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BCBDB5118F4F77C004E4B3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BCBDB5718F4F77C004E4B3D /* Cocoa.framework in Frameworks */,
+				6BCBDB5618F4F77C004E4B3D /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6BCBDB2A18F4F77C004E4B3D = {
+			isa = PBXGroup;
+			children = (
+				6BCBDB3C18F4F77C004E4B3D /* StatusBarItem */,
+				6BCBDB5A18F4F77C004E4B3D /* StatusBarItemTests */,
+				6BCBDB3518F4F77C004E4B3D /* Frameworks */,
+				6BCBDB3418F4F77C004E4B3D /* Products */,
+				B6C2F7651A274A66848D89FB /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		6BCBDB3418F4F77C004E4B3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BCBDB3318F4F77C004E4B3D /* StatusBarItem.app */,
+				6BCBDB5418F4F77C004E4B3D /* StatusBarItemTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BCBDB3518F4F77C004E4B3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BCBDB3618F4F77C004E4B3D /* Cocoa.framework */,
+				6BCBDB5518F4F77C004E4B3D /* XCTest.framework */,
+				6BCBDB3818F4F77C004E4B3D /* Other Frameworks */,
+				41BAE302A45A4B3586BC7067 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BCBDB3818F4F77C004E4B3D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BCBDB3918F4F77C004E4B3D /* AppKit.framework */,
+				6BCBDB3A18F4F77C004E4B3D /* CoreData.framework */,
+				6BCBDB3B18F4F77C004E4B3D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		6BCBDB3C18F4F77C004E4B3D /* StatusBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				6BCBDB4818F4F77C004E4B3D /* AppDelegate.h */,
+				6BCBDB4918F4F77C004E4B3D /* AppDelegate.m */,
+				6BCBDB7018F7634D004E4B3D /* Constants.h */,
+				6BCBDB7118F7634D004E4B3D /* Constants.m */,
+				6BCBDB4B18F4F77C004E4B3D /* MainMenu.xib */,
+				6BCBDB7318F78653004E4B3D /* StatusBarController.h */,
+				6BCBDB7418F78653004E4B3D /* StatusBarController.m */,
+				6BCBDB7618F78702004E4B3D /* StatusBarView.h */,
+				6BCBDB7718F78702004E4B3D /* StatusBarView.m */,
+				6BCBDB7918F788AB004E4B3D /* PopoverViewController.h */,
+				6BCBDB7A18F788AB004E4B3D /* PopoverViewController.m */,
+				6BCBDB7C18F78912004E4B3D /* PopoverViewController.xib */,
+				6BCBDB4E18F4F77C004E4B3D /* Images.xcassets */,
+				6BCBDB3D18F4F77C004E4B3D /* Supporting Files */,
+			);
+			path = StatusBarItem;
+			sourceTree = "<group>";
+		};
+		6BCBDB3D18F4F77C004E4B3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BCBDB3E18F4F77C004E4B3D /* StatusBarItem-Info.plist */,
+				6BCBDB3F18F4F77C004E4B3D /* InfoPlist.strings */,
+				6BCBDB4218F4F77C004E4B3D /* main.m */,
+				6BCBDB4418F4F77C004E4B3D /* StatusBarItem-Prefix.pch */,
+				6BCBDB4518F4F77C004E4B3D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BCBDB5A18F4F77C004E4B3D /* StatusBarItemTests */ = {
+			isa = PBXGroup;
+			children = (
+				6BCBDB6018F4F77C004E4B3D /* StatusBarItemTests.m */,
+				6BCBDB5B18F4F77C004E4B3D /* Supporting Files */,
+			);
+			path = StatusBarItemTests;
+			sourceTree = "<group>";
+		};
+		6BCBDB5B18F4F77C004E4B3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BCBDB5C18F4F77C004E4B3D /* StatusBarItemTests-Info.plist */,
+				6BCBDB5D18F4F77C004E4B3D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BCBDB3218F4F77C004E4B3D /* StatusBarItem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BCBDB6418F4F77C004E4B3D /* Build configuration list for PBXNativeTarget "StatusBarItem" */;
+			buildPhases = (
+				8D8784BCFAE74F94BEA60ECD /* Check Pods Manifest.lock */,
+				6BCBDB2F18F4F77C004E4B3D /* Sources */,
+				6BCBDB3018F4F77C004E4B3D /* Frameworks */,
+				6BCBDB3118F4F77C004E4B3D /* Resources */,
+				9FE35C6C9B4F4E5CB2FD244D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StatusBarItem;
+			productName = StatusBarItem;
+			productReference = 6BCBDB3318F4F77C004E4B3D /* StatusBarItem.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6BCBDB5318F4F77C004E4B3D /* StatusBarItemTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BCBDB6718F4F77C004E4B3D /* Build configuration list for PBXNativeTarget "StatusBarItemTests" */;
+			buildPhases = (
+				6BCBDB5018F4F77C004E4B3D /* Sources */,
+				6BCBDB5118F4F77C004E4B3D /* Frameworks */,
+				6BCBDB5218F4F77C004E4B3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BCBDB5918F4F77C004E4B3D /* PBXTargetDependency */,
+			);
+			name = StatusBarItemTests;
+			productName = StatusBarItemTests;
+			productReference = 6BCBDB5418F4F77C004E4B3D /* StatusBarItemTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BCBDB2B18F4F77C004E4B3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Vluxe;
+				TargetAttributes = {
+					6BCBDB5318F4F77C004E4B3D = {
+						TestTargetID = 6BCBDB3218F4F77C004E4B3D;
+					};
+				};
+			};
+			buildConfigurationList = 6BCBDB2E18F4F77C004E4B3D /* Build configuration list for PBXProject "StatusBarItem" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6BCBDB2A18F4F77C004E4B3D;
+			productRefGroup = 6BCBDB3418F4F77C004E4B3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BCBDB3218F4F77C004E4B3D /* StatusBarItem */,
+				6BCBDB5318F4F77C004E4B3D /* StatusBarItemTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BCBDB3118F4F77C004E4B3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BCBDB4118F4F77C004E4B3D /* InfoPlist.strings in Resources */,
+				6BCBDB4F18F4F77C004E4B3D /* Images.xcassets in Resources */,
+				6BCBDB4718F4F77C004E4B3D /* Credits.rtf in Resources */,
+				6BCBDB4D18F4F77C004E4B3D /* MainMenu.xib in Resources */,
+				6BCBDB7D18F78912004E4B3D /* PopoverViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BCBDB5218F4F77C004E4B3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BCBDB5F18F4F77C004E4B3D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D8784BCFAE74F94BEA60ECD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9FE35C6C9B4F4E5CB2FD244D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BCBDB2F18F4F77C004E4B3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BCBDB7B18F788AB004E4B3D /* PopoverViewController.m in Sources */,
+				6BCBDB4A18F4F77C004E4B3D /* AppDelegate.m in Sources */,
+				6BCBDB7518F78653004E4B3D /* StatusBarController.m in Sources */,
+				6BCBDB7818F78702004E4B3D /* StatusBarView.m in Sources */,
+				6BCBDB4318F4F77C004E4B3D /* main.m in Sources */,
+				6BCBDB7218F7634D004E4B3D /* Constants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BCBDB5018F4F77C004E4B3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BCBDB6118F4F77C004E4B3D /* StatusBarItemTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6BCBDB5918F4F77C004E4B3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BCBDB3218F4F77C004E4B3D /* StatusBarItem */;
+			targetProxy = 6BCBDB5818F4F77C004E4B3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6BCBDB3F18F4F77C004E4B3D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BCBDB4018F4F77C004E4B3D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6BCBDB4518F4F77C004E4B3D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BCBDB4618F4F77C004E4B3D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		6BCBDB4B18F4F77C004E4B3D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BCBDB4C18F4F77C004E4B3D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		6BCBDB5D18F4F77C004E4B3D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BCBDB5E18F4F77C004E4B3D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BCBDB6218F4F77C004E4B3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6BCBDB6318F4F77C004E4B3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6BCBDB6518F4F77C004E4B3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6C2F7651A274A66848D89FB /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StatusBarItem/StatusBarItem-Prefix.pch";
+				INFOPLIST_FILE = "StatusBarItem/StatusBarItem-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6BCBDB6618F4F77C004E4B3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6C2F7651A274A66848D89FB /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StatusBarItem/StatusBarItem-Prefix.pch";
+				INFOPLIST_FILE = "StatusBarItem/StatusBarItem-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6BCBDB6818F4F77C004E4B3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StatusBarItem.app/Contents/MacOS/StatusBarItem";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StatusBarItem/StatusBarItem-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "StatusBarItemTests/StatusBarItemTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6BCBDB6918F4F77C004E4B3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StatusBarItem.app/Contents/MacOS/StatusBarItem";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StatusBarItem/StatusBarItem-Prefix.pch";
+				INFOPLIST_FILE = "StatusBarItemTests/StatusBarItemTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BCBDB2E18F4F77C004E4B3D /* Build configuration list for PBXProject "StatusBarItem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BCBDB6218F4F77C004E4B3D /* Debug */,
+				6BCBDB6318F4F77C004E4B3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BCBDB6418F4F77C004E4B3D /* Build configuration list for PBXNativeTarget "StatusBarItem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BCBDB6518F4F77C004E4B3D /* Debug */,
+				6BCBDB6618F4F77C004E4B3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BCBDB6718F4F77C004E4B3D /* Build configuration list for PBXNativeTarget "StatusBarItemTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BCBDB6818F4F77C004E4B3D /* Debug */,
+				6BCBDB6918F4F77C004E4B3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BCBDB2B18F4F77C004E4B3D /* Project object */;
+}
