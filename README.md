@@ -1,0 +1,4 @@
+StatusBarItem
+=============
+
+example NSStatusBarItem
