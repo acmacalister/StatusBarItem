@@ -19,10 +19,9 @@
 		6BCBDB5F18F4F77C004E4B3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCBDB5D18F4F77C004E4B3D /* InfoPlist.strings */; };
 		6BCBDB6118F4F77C004E4B3D /* StatusBarItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB6018F4F77C004E4B3D /* StatusBarItemTests.m */; };
 		6BCBDB7218F7634D004E4B3D /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB7118F7634D004E4B3D /* Constants.m */; };
-		6BCBDB7518F78653004E4B3D /* StatusBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB7418F78653004E4B3D /* StatusBarController.m */; };
-		6BCBDB7818F78702004E4B3D /* StatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB7718F78702004E4B3D /* StatusBarView.m */; };
-		6BCBDB7B18F788AB004E4B3D /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB7A18F788AB004E4B3D /* PopoverViewController.m */; };
-		6BCBDB7D18F78912004E4B3D /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCBDB7C18F78912004E4B3D /* PopoverViewController.xib */; };
+		6BCBDB7D18F78912004E4B3D /* PanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCBDB7C18F78912004E4B3D /* PanelViewController.xib */; };
+		6BCBDB9018FE2804004E4B3D /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB8F18FE2804004E4B3D /* PanelViewController.m */; };
+		6BCBDB9318FE283D004E4B3D /* StatusBarPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB9218FE283D004E4B3D /* StatusBarPopupView.m */; };
 		9EE59B55233D4663B958FAB4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BAE302A45A4B3586BC7067 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -59,13 +58,11 @@
 		6BCBDB6018F4F77C004E4B3D /* StatusBarItemTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusBarItemTests.m; sourceTree = "<group>"; };
 		6BCBDB7018F7634D004E4B3D /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		6BCBDB7118F7634D004E4B3D /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		6BCBDB7318F78653004E4B3D /* StatusBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarController.h; sourceTree = "<group>"; };
-		6BCBDB7418F78653004E4B3D /* StatusBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarController.m; sourceTree = "<group>"; };
-		6BCBDB7618F78702004E4B3D /* StatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarView.h; sourceTree = "<group>"; };
-		6BCBDB7718F78702004E4B3D /* StatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarView.m; sourceTree = "<group>"; };
-		6BCBDB7918F788AB004E4B3D /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
-		6BCBDB7A18F788AB004E4B3D /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
-		6BCBDB7C18F78912004E4B3D /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		6BCBDB7C18F78912004E4B3D /* PanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PanelViewController.xib; sourceTree = "<group>"; };
+		6BCBDB8E18FE2804004E4B3D /* PanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelViewController.h; sourceTree = "<group>"; };
+		6BCBDB8F18FE2804004E4B3D /* PanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelViewController.m; sourceTree = "<group>"; };
+		6BCBDB9118FE283D004E4B3D /* StatusBarPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBarPopupView.h; sourceTree = "<group>"; };
+		6BCBDB9218FE283D004E4B3D /* StatusBarPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBarPopupView.m; sourceTree = "<group>"; };
 		B6C2F7651A274A66848D89FB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,13 +137,11 @@
 				6BCBDB7018F7634D004E4B3D /* Constants.h */,
 				6BCBDB7118F7634D004E4B3D /* Constants.m */,
 				6BCBDB4B18F4F77C004E4B3D /* MainMenu.xib */,
-				6BCBDB7318F78653004E4B3D /* StatusBarController.h */,
-				6BCBDB7418F78653004E4B3D /* StatusBarController.m */,
-				6BCBDB7618F78702004E4B3D /* StatusBarView.h */,
-				6BCBDB7718F78702004E4B3D /* StatusBarView.m */,
-				6BCBDB7918F788AB004E4B3D /* PopoverViewController.h */,
-				6BCBDB7A18F788AB004E4B3D /* PopoverViewController.m */,
-				6BCBDB7C18F78912004E4B3D /* PopoverViewController.xib */,
+				6BCBDB8E18FE2804004E4B3D /* PanelViewController.h */,
+				6BCBDB8F18FE2804004E4B3D /* PanelViewController.m */,
+				6BCBDB7C18F78912004E4B3D /* PanelViewController.xib */,
+				6BCBDB9118FE283D004E4B3D /* StatusBarPopupView.h */,
+				6BCBDB9218FE283D004E4B3D /* StatusBarPopupView.m */,
 				6BCBDB4E18F4F77C004E4B3D /* Images.xcassets */,
 				6BCBDB3D18F4F77C004E4B3D /* Supporting Files */,
 			);
@@ -265,7 +260,7 @@
 				6BCBDB4F18F4F77C004E4B3D /* Images.xcassets in Resources */,
 				6BCBDB4718F4F77C004E4B3D /* Credits.rtf in Resources */,
 				6BCBDB4D18F4F77C004E4B3D /* MainMenu.xib in Resources */,
-				6BCBDB7D18F78912004E4B3D /* PopoverViewController.xib in Resources */,
+				6BCBDB7D18F78912004E4B3D /* PanelViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,12 +312,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BCBDB7B18F788AB004E4B3D /* PopoverViewController.m in Sources */,
 				6BCBDB4A18F4F77C004E4B3D /* AppDelegate.m in Sources */,
-				6BCBDB7518F78653004E4B3D /* StatusBarController.m in Sources */,
-				6BCBDB7818F78702004E4B3D /* StatusBarView.m in Sources */,
 				6BCBDB4318F4F77C004E4B3D /* main.m in Sources */,
 				6BCBDB7218F7634D004E4B3D /* Constants.m in Sources */,
+				6BCBDB9018FE2804004E4B3D /* PanelViewController.m in Sources */,
+				6BCBDB9318FE283D004E4B3D /* StatusBarPopupView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

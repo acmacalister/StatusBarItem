@@ -9,11 +9,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #import "AppDelegate.h"
-#import "StatusBarController.h"
+#import "StatusBarPopupView.h"
+#import "PanelViewController.h"
 
 @interface AppDelegate ()
 
-@property(nonatomic, strong)StatusBarController *controller;
+@property(nonatomic, strong)StatusBarPopupView *popupView;
 
 @end
 
@@ -23,8 +24,15 @@
 {
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
-
-    self.controller = [[StatusBarController alloc] init];
-
+    
+    PanelViewController *panelViewController = [[PanelViewController alloc] initWithNibName:@"PanelViewController" bundle:nil];
+    
+    // init the status item popup
+    NSImage *image = [NSImage imageNamed:@"Moon_New"];
+    NSImage *alternateImage = [NSImage imageNamed:@"Moon_Full"];
+    
+    self.popupView = [[StatusBarPopupView alloc] initWithViewController:panelViewController
+                                                                  image:image
+                                                         alternateImage:alternateImage];
 }
 @end

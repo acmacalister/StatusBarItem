@@ -1,17 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//  PopoverViewController.h
+//  PanelViewController.h
 //  StatusBarItem
 //
-//  Created by Austin Cherry on 4/10/14.
+//  Created by Austin Cherry on 4/15/14.
 //  Copyright (c) 2014 Vluxe. All rights reserved.
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #import <Cocoa/Cocoa.h>
 
-@interface PopoverViewController : NSViewController<NSWindowDelegate>
-
-@property (assign) IBOutlet NSWindow *window;
+@interface PanelViewController : NSViewController
 
 @end
