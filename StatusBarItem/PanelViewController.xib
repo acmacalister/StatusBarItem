@@ -6,6 +6,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PanelViewController">
             <connections>
+                <outlet property="portsView" destination="bKB-yD-zsx" id="KRS-um-RK4"/>
+                <outlet property="processesView" destination="uSW-CX-jIe" id="PVN-f5-LjW"/>
                 <outlet property="view" destination="CgF-mR-oHO" id="PtG-uB-gfH"/>
             </connections>
         </customObject>
@@ -26,11 +28,11 @@
                             <tabViewItems>
                                 <tabViewItem label="Processes" identifier="1" id="KEc-gF-rub">
                                     <view key="view" ambiguous="YES" id="uSW-CX-jIe">
-                                        <rect key="frame" x="10" y="33" width="130" height="0.0"/>
+                                        <rect key="frame" x="10" y="33" width="241" height="319"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wGE-qg-w8J">
-                                                <rect key="frame" x="15" y="-161" width="211" height="17"/>
+                                                <rect key="frame" x="15" y="158" width="211" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Processes!" id="lWG-cL-UlD">
                                                     <font key="font" metaFont="system"/>
@@ -43,11 +45,11 @@
                                 </tabViewItem>
                                 <tabViewItem label="Ports" identifier="2" id="gtn-hb-gXV">
                                     <view key="view" id="bKB-yD-zsx">
-                                        <rect key="frame" x="10" y="33" width="130" height="0.0"/>
+                                        <rect key="frame" x="10" y="33" width="241" height="319"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nyw-JT-eiD">
-                                                <rect key="frame" x="15" y="-161" width="211" height="17"/>
+                                                <rect key="frame" x="15" y="158" width="211" height="17"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Ports!" id="dqJ-Hb-SJO">
                                                     <font key="font" metaFont="system"/>
