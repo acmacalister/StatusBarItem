@@ -23,8 +23,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        [self processLoop];
-        [self portsLoop];
+        [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(processLoop) userInfo:nil repeats:YES];
+        [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(portsLoop) userInfo:nil repeats:YES];
     }
     return self;
 }
@@ -33,9 +33,19 @@
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
         @autoreleasepool {
-            NSTask *task = [[NSTask alloc] init]; // ps -eo pcpu,pid,user,command | sort -k 1 -r | head -6
+            NSTask *task = [[NSTask alloc] init];
+            task.launchPath = @"/bin/sh";
+            task.arguments = @[@"-c", @"ps -eo pcpu,pid,comm | sed 1d | sort -k 1 -r | head -10"];
+            NSPipe *pipe;
+            pipe = [NSPipe pipe];
+            [task setStandardOutput:pipe];
+            NSFileHandle *file = [pipe fileHandleForReading];
+            [task launch];
+            NSData *data = [file readDataToEndOfFile];
+            NSString *string = [NSString stringWithUTF8String:[data bytes]];
             dispatch_async(dispatch_get_main_queue(), ^{
                 // update the UI!!
+                NSLog(@"[data]: %@", string);
             });
         }
     });
@@ -45,9 +55,19 @@
 {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
         @autoreleasepool {
-            NSTask *task = [[NSTask alloc] init]; // lsof -i tcp:0-1024
+            NSTask *task = [[NSTask alloc] init];
+            task.launchPath = @"/usr/sbin/lsof";
+            task.arguments = @[@"-i", @"tcp:0-1024"];
+            NSPipe *pipe;
+            pipe = [NSPipe pipe];
+            [task setStandardOutput:pipe];
+            NSFileHandle *file = [pipe fileHandleForReading];
+            [task launch];
+            NSData *data = [file readDataToEndOfFile];
+            NSString *string = [NSString stringWithUTF8String:[data bytes]];
             dispatch_async(dispatch_get_main_queue(), ^{
                 // update the UI!!
+                NSLog(@"[data]: %@", string);
             });
         }
     });
