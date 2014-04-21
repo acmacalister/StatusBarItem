@@ -9,10 +9,16 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #import "PanelViewController.h"
+#import "ACTableSource.h"
+#import "TextTableViewCell.h"
 
-@interface PanelViewController ()
+@interface PanelViewController ()<ACTableSourceDelegate>
+
 @property (weak) IBOutlet NSView *processesView;
 @property (weak) IBOutlet NSView *portsView;
+@property (weak) IBOutlet NSTableView *processTableView;
+@property (nonatomic,strong)ACTableSource *dataSource;
+@property(nonatomic, strong)NSMutableArray *processItems;
 
 @end
 
@@ -27,6 +33,18 @@
         [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(portsLoop) userInfo:nil repeats:YES];
     }
     return self;
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)awakeFromNib
+{
+    self.dataSource = [[ACTableSource alloc] init];
+    self.dataSource.delegate = self;
+    self.processTableView.dataSource = self.dataSource;
+    self.processTableView.delegate = self.dataSource;
+    
+    self.processItems = [NSMutableArray array];
+    
+    [self.dataSource bindArrays:self.processItems toTableView:self.processTableView];
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)processLoop
@@ -66,12 +84,22 @@
             NSData *data = [file readDataToEndOfFile];
             NSString *string = [NSString stringWithUTF8String:[data bytes]];
             dispatch_async(dispatch_get_main_queue(), ^{
-                // update the UI!!
+                [self.processItems addObject:string];
+                [self.processTableView reloadData];
                 NSLog(@"[data]: %@", string);
             });
         }
     });
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-
+- (Class)classForObject:(id)object
+{
+    return [TextTableViewCell class];
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+-(void)dealloc
+{
+    self.dataSource = nil;
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @end
