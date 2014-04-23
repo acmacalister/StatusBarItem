@@ -44,7 +44,7 @@
     
     self.processItems = [NSMutableArray array];
     
-    [self.dataSource bindArrays:self.processItems toTableView:self.processTableView];
+    [self.dataSource bindArrays:@[self.processItems] toTableView:self.processTableView];
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)processLoop
@@ -61,9 +61,13 @@
             [task launch];
             NSData *data = [file readDataToEndOfFile];
             NSString *string = [NSString stringWithUTF8String:[data bytes]];
+            if(string)
+            {
+                NSArray *items = [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+                [self.processItems addObjectsFromArray:items];
+            }
             dispatch_async(dispatch_get_main_queue(), ^{
-                // update the UI!!
-                NSLog(@"[data]: %@", string);
+                [self.processTableView reloadData];
             });
         }
     });
@@ -84,8 +88,6 @@
             NSData *data = [file readDataToEndOfFile];
             NSString *string = [NSString stringWithUTF8String:[data bytes]];
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self.processItems addObject:string];
-                [self.processTableView reloadData];
                 NSLog(@"[data]: %@", string);
             });
         }

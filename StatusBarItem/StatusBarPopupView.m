@@ -10,7 +10,7 @@
 
 #import "StatusBarPopupView.h"
 
-#define kMinViewWidth 22
+#define kMinViewWidth 16
 
 @interface StatusBarPopupView ()
 
@@ -51,7 +51,7 @@
         self.imageView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, kMinViewWidth, height)];
         [self addSubview:self.imageView];
         
-        self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+        self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
         self.statusItem.view = self;
         
         self.active = NO;
