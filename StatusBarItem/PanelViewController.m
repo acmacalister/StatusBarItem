@@ -19,6 +19,7 @@
 @property (weak) IBOutlet NSTableView *processTableView;
 @property (nonatomic,strong)ACTableSource *dataSource;
 @property(nonatomic, strong)NSMutableArray *processItems;
+@property(nonatomic, strong)NSMutableArray *portItems;
 
 @end
 
@@ -53,7 +54,7 @@
         @autoreleasepool {
             NSTask *task = [[NSTask alloc] init];
             task.launchPath = @"/bin/sh";
-            task.arguments = @[@"-c", @"ps -eo pcpu,pid,comm | sed 1d | sort -k 1 -r | head -10"];
+            task.arguments = @[@"-c", @"ps -eo pcpu,pid,comm | sed 1d | sort -k 1 -r | head -30"];
             NSPipe *pipe;
             pipe = [NSPipe pipe];
             [task setStandardOutput:pipe];
@@ -63,8 +64,10 @@
             NSString *string = [NSString stringWithUTF8String:[data bytes]];
             if(string)
             {
+                [self.processItems removeAllObjects];
                 NSArray *items = [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-                [self.processItems addObjectsFromArray:items];
+                for(NSString *item in items)
+                    [self.processItems addObject:[[item componentsSeparatedByString:@"/"] lastObject]];
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.processTableView reloadData];
@@ -87,8 +90,15 @@
             [task launch];
             NSData *data = [file readDataToEndOfFile];
             NSString *string = [NSString stringWithUTF8String:[data bytes]];
+            if(string)
+            {
+                [self.portItems removeAllObjects];
+                NSArray *items = [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+                for(NSString *item in items)
+                    [self.portItems addObject:item];
+            }
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"[data]: %@", string);
+               //[self.ports reloadData];
             });
         }
     });
