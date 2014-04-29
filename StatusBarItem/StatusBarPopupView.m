@@ -48,7 +48,7 @@
         self.image = image;
         self.alternateImage = alternateImage;
         
-        self.imageView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, kMinViewWidth, height)];
+        self.imageView = [[NSImageView alloc] initWithFrame:NSMakeRect(6, 0, kMinViewWidth, height)];
         [self addSubview:self.imageView];
         
         self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];

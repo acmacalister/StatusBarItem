@@ -6,15 +6,18 @@ PODS:
   - CocoaLumberjack/Extensions (1.8.1):
     - CocoaLumberjack/Core
   - NSCustomizeKit (0.0.2)
+  - XMLKit (0.0.2)
 
 DEPENDENCIES:
   - ACDataViews
   - CocoaLumberjack
   - NSCustomizeKit
+  - XMLKit
 
 SPEC CHECKSUMS:
   ACDataViews: a260e5536b4fdb8ec92b493863beb23d55e50f82
   CocoaLumberjack: 020378ec400d658923bf5887178394f65f052c90
   NSCustomizeKit: 565333be123f1fb23b77927a491abd1cefb5307b
+  XMLKit: 459385dac9079b3dea9a06cda9cc5cbbb866d628
 
 COCOAPODS: 0.32.1
