@@ -24,16 +24,17 @@
     {
         self.textLabel = [[ACLabel alloc] init];
         self.textLabel.backgroundColor = [NSColor clearColor];
+        self.textLabel.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
         [self addSubview:self.textLabel];
     }
     return self;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////
--(void)layout
-{
-    [super layout];
-    self.textLabel.frame = NSMakeRect(0, 0, self.frame.size.width, self.frame.size.height);
-}
+//-(void)layout
+//{
+//    [super layout];
+//    self.textLabel.frame = NSMakeRect(0, 0, self.frame.size.width, self.frame.size.height);
+//}
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 -(void)setObject:(id)object
 {

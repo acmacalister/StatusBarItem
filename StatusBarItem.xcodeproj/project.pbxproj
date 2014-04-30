@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B79C44F1904E186003F575A /* TextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B79C44E1904E186003F575A /* TextTableViewCell.m */; };
+		6BB9CD93191079A600CCFFB3 /* RSSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9CD92191079A600CCFFB3 /* RSSRequest.m */; };
 		6BCBDB3718F4F77C004E4B3D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BCBDB3618F4F77C004E4B3D /* Cocoa.framework */; };
 		6BCBDB4118F4F77C004E4B3D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6BCBDB3F18F4F77C004E4B3D /* InfoPlist.strings */; };
 		6BCBDB4318F4F77C004E4B3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BCBDB4218F4F77C004E4B3D /* main.m */; };
@@ -40,6 +41,8 @@
 		41BAE302A45A4B3586BC7067 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B79C44D1904E186003F575A /* TextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextTableViewCell.h; sourceTree = "<group>"; };
 		6B79C44E1904E186003F575A /* TextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextTableViewCell.m; sourceTree = "<group>"; };
+		6BB9CD91191079A600CCFFB3 /* RSSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSRequest.h; sourceTree = "<group>"; };
+		6BB9CD92191079A600CCFFB3 /* RSSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSRequest.m; sourceTree = "<group>"; };
 		6BCBDB3318F4F77C004E4B3D /* StatusBarItem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatusBarItem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCBDB3618F4F77C004E4B3D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6BCBDB3918F4F77C004E4B3D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -149,6 +152,8 @@
 				6BCBDB3D18F4F77C004E4B3D /* Supporting Files */,
 				6B79C44D1904E186003F575A /* TextTableViewCell.h */,
 				6B79C44E1904E186003F575A /* TextTableViewCell.m */,
+				6BB9CD91191079A600CCFFB3 /* RSSRequest.h */,
+				6BB9CD92191079A600CCFFB3 /* RSSRequest.m */,
 			);
 			path = StatusBarItem;
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				6BCBDB9018FE2804004E4B3D /* PanelViewController.m in Sources */,
 				6B79C44F1904E186003F575A /* TextTableViewCell.m in Sources */,
 				6BCBDB9318FE283D004E4B3D /* StatusBarPopupView.m in Sources */,
+				6BB9CD93191079A600CCFFB3 /* RSSRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

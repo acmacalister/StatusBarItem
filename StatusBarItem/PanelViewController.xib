@@ -10,6 +10,7 @@
                 <outlet property="portsView" destination="bKB-yD-zsx" id="KRS-um-RK4"/>
                 <outlet property="processTableView" destination="HYQ-uf-3fX" id="Luw-c6-DvV"/>
                 <outlet property="processesView" destination="uSW-CX-jIe" id="PVN-f5-LjW"/>
+                <outlet property="rssTableView" destination="u1A-qz-rdK" id="Rft-Qv-cTh"/>
                 <outlet property="view" destination="CgF-mR-oHO" id="PtG-uB-gfH"/>
             </connections>
         </customObject>
@@ -167,7 +168,7 @@
                                     </view>
                                 </tabViewItem>
                                 <tabViewItem label="Ports" identifier="2" id="gtn-hb-gXV">
-                                    <view key="view" ambiguous="YES" id="bKB-yD-zsx">
+                                    <view key="view" id="bKB-yD-zsx">
                                         <rect key="frame" x="10" y="33" width="241" height="319"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
@@ -290,10 +291,10 @@
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </clipView>
                                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="qYq-b5-I73">
-                                                    <rect key="frame" x="1" y="302" width="238" height="16"/>
+                                                    <rect key="frame" x="1" y="1" width="0.0" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
-                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="37" horizontal="NO" id="gx4-kJ-DeE">
+                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="gx4-kJ-DeE">
                                                     <rect key="frame" x="-15" y="17" width="16" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
@@ -306,9 +307,72 @@
                                     </view>
                                 </tabViewItem>
                                 <tabViewItem label="RSS" identifier="" id="RC6-nJ-xxu">
-                                    <view key="view" id="poY-FZ-nzS">
+                                    <view key="view" ambiguous="YES" id="poY-FZ-nzS">
                                         <rect key="frame" x="10" y="33" width="241" height="319"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1X-Nu-A4p">
+                                                <rect key="frame" x="-3" y="-6" width="247" height="322"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <clipView key="contentView" ambiguous="YES" misplaced="YES" id="C0f-GK-piT">
+                                                    <rect key="frame" x="1" y="1" width="245" height="320"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="u1A-qz-rdK">
+                                                            <rect key="frame" x="0.0" y="0.0" width="247" height="320"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <size key="intercellSpacing" width="3" height="2"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                            <tableColumns>
+                                                                <tableColumn width="244" minWidth="40" maxWidth="1000" id="ZQk-Zf-oOI">
+                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </tableHeaderCell>
+                                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="eS1-4a-iSB">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                    <prototypeCellViews>
+                                                                        <tableCellView id="3mX-tv-zz7">
+                                                                            <rect key="frame" x="1" y="1" width="244" height="17"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <subviews>
+                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1vd-PI-IFm">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="244" height="17"/>
+                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="emh-EE-KFg">
+                                                                                        <font key="font" metaFont="system"/>
+                                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                                    </textFieldCell>
+                                                                                </textField>
+                                                                            </subviews>
+                                                                            <connections>
+                                                                                <outlet property="textField" destination="1vd-PI-IFm" id="Trc-4l-J8a"/>
+                                                                            </connections>
+                                                                        </tableCellView>
+                                                                    </prototypeCellViews>
+                                                                </tableColumn>
+                                                            </tableColumns>
+                                                        </tableView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </clipView>
+                                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="m8w-6H-mql">
+                                                    <rect key="frame" x="1" y="305" width="245" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="P1d-gL-BeN">
+                                                    <rect key="frame" x="-15" y="17" width="16" height="0.0"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                        </subviews>
                                     </view>
                                 </tabViewItem>
                             </tabViewItems>

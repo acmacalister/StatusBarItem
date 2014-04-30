@@ -11,6 +11,7 @@
 #import "PanelViewController.h"
 #import "ACTableSource.h"
 #import "TextTableViewCell.h"
+#import "RSSRequest.h"
 
 @interface PanelViewController ()<ACTableSourceDelegate>
 
@@ -25,6 +26,11 @@
 @property(nonatomic, strong)NSMutableArray *portPidItems;
 @property(nonatomic, strong)NSMutableArray *portComItems;
 @property(nonatomic, strong)NSMutableArray *portNameItems;
+
+@property (weak) IBOutlet NSTableView *rssTableView;
+@property (nonatomic,strong)ACTableSource *rssDataSource;
+@property(nonatomic, strong)NSMutableArray *rssDataItems;
+@property(nonatomic, strong)NSMutableArray *rssLinkItems;
 
 
 - (IBAction)notSafeToGoAlone:(id)sender;
@@ -49,6 +55,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.dataSource = [[ACTableSource alloc] init];
     self.dataSource.delegate = self;
     self.processTableView.dataSource = self.dataSource;
@@ -70,6 +77,16 @@
     self.portNameItems = [NSMutableArray array];
     
     [self.portDataSource bindArrays:@[self.portPidItems, self.portComItems, self.portNameItems] toTableView:self.portTableView];
+    
+    self.rssDataItems = [NSMutableArray array];
+    self.rssLinkItems = [NSMutableArray array];
+    self.rssDataSource = [[ACTableSource alloc] init];
+    self.rssDataSource.delegate = self;
+    self.rssTableView.dataSource = self.rssDataSource;
+    self.rssTableView.delegate = self.rssDataSource;
+    
+    [self.rssDataSource bindArrays:@[self.rssDataItems] toTableView:self.rssTableView];
+    [self getRss];
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)processLoop
@@ -189,6 +206,50 @@
                          informativeTextWithFormat:@"Legend of Zelda nerdiness"];
     [alert runModal];
     DDLogCError(@"[ERROR] This is a sample error to warn users of unsafe conditions");
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+-(void)getRss
+{
+    RSSRequest *request = [RSSRequest requestWithURL:@"http://searchsecurity.techtarget.com/rss/Security-Wire-Daily-News.xml"
+                                             success:^(RSSRequest *request) {
+                                                 XMLElement *element = [request responseElement];
+                                                 NSArray *array = [element findElements:@"title"];
+                                                 for(XMLElement *child in array)
+                                                 {
+                                                     NSString *title = child.text;
+                                                     title = [title stringByReplacingOccurrencesOfString:@"CDATA" withString:@""];
+                                                     title = [title stringByReplacingOccurrencesOfString:@"[" withString:@""];
+                                                    title = [title stringByReplacingOccurrencesOfString:@"]" withString:@""];
+                                                     title = [title stringByReplacingOccurrencesOfString:@"<" withString:@""];
+                                                     title = [title stringByReplacingOccurrencesOfString:@">" withString:@""];
+                                                     title = [title stringByReplacingOccurrencesOfString:@"!" withString:@""];
+                                                     [self.rssDataItems addObject:title];
+                                                 }
+                                                 array = [element findElements:@"link"];
+                                                 for(XMLElement *child in array)
+                                                     [self.rssLinkItems addObject:child.text];
+                                                 for(int i = 0; i < 2; i++)
+                                                 {
+                                                     [self.rssLinkItems removeObjectAtIndex:0];
+                                                     [self.rssDataItems removeObjectAtIndex:0];
+                                                 }
+                                                 dispatch_async(dispatch_get_main_queue(), ^{
+                                                     [self.rssTableView reloadData];
+                                                 });
+                                                 //NSLog(@"element: %@",element.text);
+                                             } failure:^(RSSRequest *request, NSError *error) {
+                                                 NSLog(@"failed to get RSS thing");
+                                             }];
+    [request start];
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+-(void)didSelectRow:(NSArray *)objects atIndex:(NSInteger)row
+{
+    if(objects.count == 1)
+    {
+        NSString *str = self.rssLinkItems[row];
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:str]];
+    }
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 @end
